@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNES ETEC | Excelência em Educação</title>
+    <meta name="description"
+        content="UNES ETEC: educação de excelência com cursos técnicos e tecnológicos que preparam você para o mercado de trabalho. Inscreva-se já!">
+    <meta name="keywords" content="unes, etec, educação, cursos técnicos, faculdade, tecnologia, ensino">
+
+    <meta property="og:title" content="UNES ETEC | Excelência em Educação">
+    <meta property="og:description"
+        content="UNES ETEC: educação de excelência com cursos técnicos e tecnológicos que preparam você para o mercado de trabalho. Inscreva-se já!">
+    <meta property="og:image" content="https://seusite.com/assets/img/og-image.jpg">
+    <meta property="og:url" content="https://seusite.com">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <button id="backToTopBtn" aria-label="Voltar ao topo da página"></button>
+
+    <header class="header" id="header">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#hero" class="logo">
+                <img src="assets/img/logo.png" alt="Logotipo UNES ETEC">
+            </a>
+
+            <nav class="navbar-desktop">
+                <ul class="nav-list">
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+                    <li><a href="#cursos" class="nav-link">Cursos</a></li>
+                    <li><a href="#depoimentos" class="nav-link">Depoimentos</a></li>
+                    <li><a href="#equipe" class="nav-link">Equipe</a></li>
+                    <li><a href="#contato" class="nav-link btn btn-primary-outline">Contato</a></li>
+                </ul>
+            </nav>
+
+            <button class="navbar-toggler d-md-none" aria-label="Abrir menu de navegação" aria-controls="mobile-menu"
+                aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-mobile" id="mobile-menu">
+                <div class="mobile-menu-inner">
+                    <ul class="mobile-nav-list">
+                        <li><a href="#sobre" class="mobile-nav-link">Sobre</a></li>
+                        <li><a href="#diferenciais" class="mobile-nav-link">Diferenciais</a></li>
+                        <li><a href="#cursos" class="mobile-nav-link">Cursos</a></li>
+                        <li><a href="#depoimentos" class="mobile-nav-link">Depoimentos</a></li>
+                        <li><a href="#equipe" class="mobile-nav-link">Equipe</a></li>
+                        <li><a href="#contato" class="mobile-nav-link btn btn-primary-outline">Contato</a></li>
+                    </ul>
+                    <div class="dark-mode-toggle-mobile">
+                        <span>Modo Escuro</span>
+                        <input type="checkbox" id="dark-mode-toggle-mobile" aria-label="Ativar modo escuro">
+                        <label for="dark-mode-toggle-mobile" class="toggle-label"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="hero">
+            <div class="hero-bg" aria-hidden="true" style="background-image: url('assets/img/hero-bg.jpg');"></div>
+            <div class="container hero-content">
+                <h1 class="hero-headline" data-aos="fade-up">Seu futuro começa aqui.</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                    Na UNES ETEC, transformamos paixão por conhecimento em carreiras de sucesso.
+                </p>
+                <a href="#cursos" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-delay="400">
+                    Ver Cursos
+                </a>
+            </div>
+        </section>
+
+        <section class="section about-section" id="sobre">
+            <div class="container">
+                <div class="row about-intro">
+                    <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                        <h2 class="section-title">Sobre a UNES ETEC</h2>
+                        <p class="section-subtitle">Construindo o futuro com base sólida.</p>
+                        <p class="about-text">
+                            Desde 1995, a UNES ETEC tem sido uma referência em educação de qualidade, comprometida em
+                            preparar
+                            profissionais para os desafios do mercado de trabalho. Nossa missão é oferecer um ambiente
+                            de
+                            aprendizagem inovador e inclusivo, onde cada aluno pode desenvolver seu potencial máximo.
+                        </p>
+                    </div>
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <img src="assets/img/sobre-bg.png" alt="Estudantes em sala de aula" class="img-fluid rounded-4">
+                    </div>
+                </div>
+
+                <div class="about-features row justify-content-center mt-5">
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                        <div class="feature-card">
+                            <img src="assets/img/diferencial-icon-1.png" alt="Ícone de livro" class="feature-icon">
+                            <h3 class="feature-title">Metodologia Inovadora</h3>
+                            <p class="feature-text">
+                                Nossa abordagem pedagógica foca em projetos práticos, incentivando a criatividade e a
+                                resolução de problemas reais.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card">
+                            <img src="assets/img/diferencial-icon-2.png" alt="Ícone de diploma" class="feature-icon">
+                            <h3 class="feature-title">Reconhecimento no Mercado</h3>
+                            <p class="feature-text">
+                                Nossos diplomas são altamente valorizados por empresas, garantindo uma alta taxa de
+                                empregabilidade.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card">
+                            <img src="assets/img/diferencial-icon-3.png" alt="Ícone de lâmpada" class="feature-icon">
+                            <h3 class="feature-title">Infraestrutura de Ponta</h3>
+                            <p class="feature-text">
+                                Laboratórios equipados e salas de aula modernas para uma experiência de aprendizado
+                                completa.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section difference-section" id="diferenciais">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">O que nos torna únicos?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    A UNES ETEC se destaca pela excelência e inovação.
+                </p>
+                <div class="row mt-5">
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="difference-card">
+                            <div class="difference-card-inner">
+                                <div class="difference-card-front">
+                                    <h3 class="difference-title">Cursos Atualizados</h3>
+                                    <p class="difference-description">
+                                        Nossa grade curricular é revisada constantemente para acompanhar as tendências
+                                        do mercado.
+                                    </p>
+                                </div>
+                                <div class="difference-card-back">
+                                    <p class="difference-description">
+                                        Conteúdo focado nas habilidades mais requisitadas pelas empresas, garantindo sua
+                                        empregabilidade.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="difference-card">
+                            <div class="difference-card-inner">
+                                <div class="difference-card-front">
+                                    <h3 class="difference-title">Professores Especialistas</h3>
+                                    <p class="difference-description">
+                                        Corpo docente formado por profissionais experientes e atuantes no mercado.
+                                    </p>
+                                </div>
+                                <div class="difference-card-back">
+                                    <p class="difference-description">
+                                        Aprenda com quem realmente entende e aplica os conceitos no dia a dia
+                                        profissional.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="difference-card">
+                            <div class="difference-card-inner">
+                                <div class="difference-card-front">
+                                    <h3 class="difference-title">Conexão com Empresas</h3>
+                                    <p class="difference-description">
+                                        Parcerias com empresas para estágios e oportunidades de emprego.
+                                    </p>
+                                </div>
+                                <div class="difference-card-back">
+                                    <p class="difference-description">
+                                        Facilitamos sua entrada no mercado de trabalho com uma ampla rede de contatos.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section courses-section" id="cursos">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="section-title">Nossos Cursos</h2>
+                    <p class="section-subtitle">
+                        Encontre o curso ideal para sua carreira.
+                    </p>
+                </div>
+
+                <div id="courseCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row justify-content-center g-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-1.jpg" class="card-img-top"
+                                            alt="Curso de Análise e Desenvolvimento de Sistemas">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Análise e Desenvolvimento de Sistemas</h5>
+                                            <p class="card-text">
+                                                Formação completa para projetar, desenvolver e gerenciar sistemas de
+                                                software.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="1">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-2.jpg" class="card-img-top"
+                                            alt="Curso de Gestão de Recursos Humanos">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Gestão de Recursos Humanos</h5>
+                                            <p class="card-text">
+                                                Especialização em gestão de pessoas, recrutamento, seleção e
+                                                desenvolvimento
+                                                organizacional.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="2">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-3.jpg" class="card-img-top"
+                                            alt="Curso de Enfermagem">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Enfermagem</h5>
+                                            <p class="card-text">
+                                                Capacitação para atuar no cuidado e assistência à saúde, em diversos
+                                                ambientes.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="3">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row justify-content-center g-4">
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-4.jpg" class="card-img-top"
+                                            alt="Curso de Marketing Digital">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Marketing Digital</h5>
+                                            <p class="card-text">
+                                                Criação de estratégias digitais, SEO, redes sociais e análise de dados.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="4">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-5.jpg" class="card-img-top"
+                                            alt="Curso de Ciência de Dados">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Ciência de Dados</h5>
+                                            <p class="card-text">
+                                                Análise e interpretação de grandes volumes de dados para tomar decisões
+                                                estratégicas.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="5">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-4">
+                                    <div class="course-card">
+                                        <img src="assets/img/curso-6.jpg" class="card-img-top"
+                                            alt="Curso de Logística">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Logística</h5>
+                                            <p class="card-text">
+                                                Gestão da cadeia de suprimentos, transporte, distribuição e
+                                                armazenamento.
+                                            </p>
+                                            <button class="btn btn-secondary-outline course-modal-btn"
+                                                data-bs-toggle="modal" data-bs-target="#courseModal"
+                                                data-course-id="6">
+                                                Saiba Mais
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#courseCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#courseCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Próximo</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div class="modal fade" id="courseModal" tabindex="-1" aria-labelledby="courseModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="courseModalLabel">Detalhes do Curso</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="modal-course-image">
+                            <img src="" alt="" class="img-fluid rounded-3">
+                        </div>
+                        <h3 class="modal-course-title mt-4"></h3>
+                        <p class="modal-course-description"></p>
+                        <h4 class="mt-4">O que você vai aprender:</h4>
+                        <ul class="modal-course-topics">
+                            <li>Conteúdo programático 1</li>
+                            <li>Conteúdo programático 2</li>
+                            <li>Conteúdo programático 3</li>
+                            <li>Conteúdo programático 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="section numbers-section" id="numeros">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">Nosso Impacto em Números</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Dados que comprovam nossa excelência.
+                </p>
+                <div class="row g-4 mt-5">
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="number-card">
+                            <h3 class="counter" data-target="25000">0</h3>
+                            <p class="number-label">Alunos Formados</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                        <div class="number-card">
+                            <h3 class="counter" data-target="95">0</h3>
+                            <p class="number-label">Parcerias com Empresas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                        <div class="number-card">
+                            <h3 class="counter" data-target="98">0</h3>
+                            <p class="number-label">Empregabilidade</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section testimonials-section" id="depoimentos">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">O que nossos alunos dizem?</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Histórias de quem transformou o futuro na UNES ETEC.
+                </p>
+
+                <div class="testimonials-slider-container mt-5" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonials-slider">
+                        <div class="testimonial-card">
+                            <img src="assets/img/depoimento-1.jpg" alt="Foto de Maria Eduarda" class="testimonial-photo">
+                            <p class="testimonial-text">
+                                "A UNES ETEC me deu a base teórica e prática que eu precisava para começar minha
+                                carreira
+                                em tecnologia. Hoje, trabalho em uma grande empresa e sou muito grata!"
+                            </p>
+                            <h4 class="testimonial-name">Maria Eduarda</h4>
+                            <span class="testimonial-course">Análise de Sistemas, Turma 2022</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <img src="assets/img/depoimento-2.jpg" alt="Foto de João Vitor" class="testimonial-photo">
+                            <p class="testimonial-text">
+                                "O curso de Gestão de RH superou minhas expectativas. Os professores são incríveis e a
+                                metodologia de ensino é muito dinâmica. Recomendo a todos!"
+                            </p>
+                            <h4 class="testimonial-name">João Vitor</h4>
+                            <span class="testimonial-course">Gestão de RH, Turma 2021</span>
+                        </div>
+                        <div class="testimonial-card">
+                            <img src="assets/img/depoimento-3.jpg" alt="Foto de Ana Clara" class="testimonial-photo">
+                            <p class="testimonial-text">
+                                "A UNES ETEC me ajudou a encontrar meu primeiro emprego na área. A qualidade do ensino é
+                                excepcional e a infraestrutura é de ponta. Inesquecível!"
+                            </p>
+                            <h4 class="testimonial-name">Ana Clara</h4>
+                            <span class="testimonial-course">Enfermagem, Turma 2020</span>
+                        </div>
+                    </div>
+                    <div class="testimonials-slider-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section team-section" id="equipe">
+            <div class="container text-center">
+                <h2 class="section-title" data-aos="fade-up">Nossa Equipe</h2>
+                <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Conheça os profissionais que movem a UNES ETEC.
+                </p>
+                <div class="row g-4 mt-5 justify-content-center">
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="team-card">
+                            <img src="assets/img/prof-1.jpg" alt="Foto de Professor Carlos Silva" class="team-photo">
+                            <div class="team-info">
+                                <h4 class="team-name">Carlos Silva</h4>
+                                <span class="team-role">Diretor Geral</span>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn de Carlos Silva"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Twitter de Carlos Silva"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="team-card">
+                            <img src="assets/img/prof-2.jpg" alt="Foto de Professora Ana Paula" class="team-photo">
+                            <div class="team-info">
+                                <h4 class="team-name">Ana Paula</h4>
+                                <span class="team-role">Coordenadora Pedagógica</span>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn de Ana Paula"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram de Ana Paula"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                        <div class="team-card">
+                            <img src="assets/img/prof-3.jpg" alt="Foto de Professor Lucas Dantas" class="team-photo">
+                            <div class="team-info">
+                                <h4 class="team-name">Lucas Dantas</h4>
+                                <span class="team-role">Chefe do Depto. de Tecnologia</span>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn de Lucas Dantas"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Github de Lucas Dantas"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="500">
+                        <div class="team-card">
+                            <img src="assets/img/prof-4.jpg" alt="Foto de Professora Juliana Ribeiro"
+                                class="team-photo">
+                            <div class="team-info">
+                                <h4 class="team-name">Juliana Ribeiro</h4>
+                                <span class="team-role">Coordenadora de Marketing</span>
+                            </div>
+                            <div class="team-social">
+                                <a href="#" aria-label="LinkedIn de Juliana Ribeiro"><i class="fab fa-linkedin"></i></a>
+                                <a href="#" aria-label="Instagram de Juliana Ribeiro"><i
+                                        class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section faq-section" id="faq">
+            <div class="container">
+                <div class="text-center" data-aos="fade-up">
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <p class="section-subtitle">
+                        Tire suas dúvidas e saiba mais sobre nossa instituição.
+                    </p>
+                </div>
+                <div class="accordion accordion-flush mt-5" id="faqAccordion" data-aos="fade-up" data-aos-delay="200">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Quais são os requisitos para a matrícula?
+                            </button>
+                        </h3>
+                        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Para se matricular, é necessário ter concluído o ensino médio ou equivalente. O processo
+                                seletivo é composto por uma prova e análise de histórico escolar. Mais detalhes podem ser
+                                encontrados na página de inscrição.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                A UNES oferece bolsas de estudo?
+                            </button>
+                        </h3>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim, oferecemos diversas modalidades de bolsas de estudo, incluindo bolsas por mérito
+                                acadêmico e programas de auxílio financeiro. Entre em contato com nossa secretaria para
+                                saber mais sobre as condições e prazos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Como posso visitar o campus?
+                            </button>
+                        </h3>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                É possível agendar uma visita guiada ao nosso campus. Basta preencher o formulário na
+                                seção de Contato ou ligar para nosso atendimento. Teremos prazer em recebê-lo!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section contact-section" id="contato">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <h2 class="section-title">Entre em Contato</h2>
+                        <p class="section-subtitle">
+                            Envie sua mensagem e responderemos o mais breve possível.
+                        </p>
+                        <form id="contact-form" class="mt-4 needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nome Completo</label>
+                                <input type="text" class="form-control" id="name" required>
+                                <div class="invalid-feedback">
+                                    Por favor, insira seu nome.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Endereço de E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">
+                                    Por favor, insira um e-mail válido.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Telefone (opcional)</label>
+                                <input type="tel" class="form-control" id="phone" pattern="[0-9]{11}">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Sua Mensagem</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, escreva sua mensagem.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary-alt">Enviar Mensagem</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                        <h2 class="section-title">Nossa Localização</h2>
+                        <p class="section-subtitle">Visite-nos ou entre em contato pelos nossos canais.</p>
+                        <div class="contact-info">
+                            <p><i class="fas fa-map-marker-alt"></i> Rua da Educação, 123 - Centro, São Paulo - SP</p>
+                            <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                            <p><i class="fas fa-envelope"></i> contato@unesetec.com.br</p>
+                        </div>
+                        <div class="map-container mt-4">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14629.809315367615!2d-46.6577519!3d-23.5517173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5a2b0e9c9a03%3A0x7e7b5b7b9f8f2b7b!2sRua%20da%20Consola%C3%A7%C3%A3o%2C%20222!5e0!3m2!1spt-BR!2sbr!4v1628000000000!5m2!1spt-BR!2sbr"
+                                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" aria-label="Localização da UNES ETEC no Google Maps">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="footer-brand">
+                        <a href="#hero" class="logo">
+                            <img src="assets/img/logo.png" alt="Logotipo UNES ETEC">
+                        </a>
+                        <p class="footer-description mt-3">
+                            Excelência em educação para um futuro de sucesso.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="footer-heading">Links Rápidos</h5>
+                    <ul class="footer-links">
+                        <li><a href="#sobre">Sobre Nós</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Siga-nos</h5>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="Facebook da UNES ETEC"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram da UNES ETEC"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn da UNES ETEC"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter da UNES ETEC"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="footer-bottom text-center">
+                <p>&copy; 2025 UNES. Todos os direitos reservados.</p>
+                <p>
+                    <a href="https://github.com/miguelfidelis1/UNES-ETEC" target="_blank"
+                        rel="noopener noreferrer" class="github-link">
+                        Repositório do Projeto <i class="fab fa-github"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="successToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Sucesso!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-success text-white">
+                Mensagem enviada com sucesso!
+            </div>
+        </div>
+        <div id="errorToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Erro!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body bg-danger text-white">
+                Ocorreu um erro ao enviar a mensagem.
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
