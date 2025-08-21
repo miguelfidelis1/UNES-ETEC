@@ -1,15 +1,3 @@
-/*
- * script.js
- *
- * Arquivo de interações JavaScript para o site UNES ETEC.
- * Contém a lógica para menu mobile, scroll suave, animações on-scroll,
- * contadores, carrossel, modais e validação de formulário.
- *
- * Autor: Gemini
- * Data: 20 de Agosto de 2025
- *
- */
-
 // Mapeamento de dados dos cursos para o modal
 const coursesData = {
   1: {
