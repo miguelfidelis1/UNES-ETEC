@@ -1,8 +1,4 @@
-/* ========================================================================= */
-/* 1. Variáveis CSS e Design System                                         */
-/* ========================================================================= */
 :root {
-  /* Cores */
   --color-primary: #005B96;
   --color-primary-dark: #004d80;
   --color-secondary: #FFCA28;
@@ -14,18 +10,15 @@
   --color-card-background: #FFFFFF;
   --color-border: #E0E0E0;
 
-  /* Cores para Dark Mode */
   --dark-mode-bg: #0D1117;
   --dark-mode-card-bg: #161B22;
   --dark-mode-text-light: #E0E0E0;
   --dark-mode-text-dark: #FFFFFF;
   --dark-mode-border: #21262D;
 
-  /* Fontes */
   --font-heading: 'Poppins', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Espaçamento e Sombra */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
@@ -36,12 +29,10 @@
   --border-radius: 0.75rem;
   --border-radius-pill: 999px;
 
-  /* Transições */
   --transition-fast: 0.2s ease-in-out;
   --transition-slow: 0.5s ease-in-out;
 }
 
-/* Modo Escuro (Dark Mode) */
 [data-theme="dark"] {
   --color-text-dark: var(--dark-mode-text-dark);
   --color-text-light: var(--dark-mode-text-light);
@@ -52,9 +43,6 @@
   color: var(--dark-mode-text-light);
 }
 
-/* ========================================================================= */
-/* 2. Estilos Globais e Reset                                               */
-/* ========================================================================= */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -111,7 +99,7 @@ h2.section-title {
 
 .section {
   padding: var(--spacing-xl) 0;
-  overflow: hidden; /* Para evitar que animações se espalhem */
+  overflow: hidden;
 }
 
 img {
@@ -126,7 +114,6 @@ img {
   margin: 0 auto;
 }
 
-/* Estilos de Botões */
 .btn {
   display: inline-block;
   padding: 0.75rem 2rem;
@@ -174,7 +161,6 @@ img {
   transform: translateY(-3px);
 }
 
-/* Estilos para o Dark Mode */
 [data-theme="dark"] .btn-primary-outline {
   border-color: var(--color-secondary);
   color: var(--color-secondary);
@@ -185,7 +171,6 @@ img {
   color: var(--color-text-dark);
 }
 
-/* Estilos para o Dark Mode */
 [data-theme="dark"] .btn-secondary-outline {
   border-color: var(--color-secondary);
   color: var(--color-secondary);
@@ -195,11 +180,6 @@ img {
   color: var(--color-text-dark);
 }
 
-/* ========================================================================= */
-/* 3. Componentes e Seções Específicas                                      */
-/* ========================================================================= */
-
-/* Cabeçalho (Header) */
 .header {
   position: fixed;
   top: 0;
@@ -232,7 +212,6 @@ img {
   margin-right: 0.5rem;
 }
 
-/* Menu Desktop */
 .navbar-desktop .nav-list {
   list-style: none;
   display: flex;
@@ -268,7 +247,6 @@ img {
   width: 100%;
 }
 
-/* Menu Mobile */
 .navbar-toggler {
   background: none;
   border: none;
@@ -342,7 +320,6 @@ img {
   color: var(--color-text-dark);
 }
 
-/* Dark Mode Toggle */
 .dark-mode-toggle {
   display: flex;
   align-items: center;
@@ -394,7 +371,6 @@ img {
   color: var(--color-text-dark);
 }
 
-/* Hero Section */
 .hero-section {
   position: relative;
   height: 100vh;
@@ -414,10 +390,10 @@ img {
   height: 100%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+  background-attachment: fixed;
   z-index: -1;
-  filter: brightness(0.5); /* Diminui o brilho da imagem */
-  will-change: transform; /* Otimização para animação */
+  filter: brightness(0.5);
+  will-change: transform;
 }
 
 .hero-content {
@@ -437,7 +413,6 @@ img {
   margin: 0 auto var(--spacing-lg);
 }
 
-/* Seção Sobre a UNES */
 .about-intro img {
   border-radius: var(--border-radius);
   box-shadow: var(--box-shadow-md);
@@ -469,10 +444,9 @@ img {
   font-weight: 600;
 }
 
-/* Seção de Diferenciais */
 .difference-card {
   height: 250px;
-  perspective: 1000px; /* Para o efeito 3D */
+  perspective: 1000px;
 }
 
 .difference-card-inner {
@@ -515,7 +489,6 @@ img {
   color: #fff;
 }
 
-/* Seção de Cursos */
 .course-card {
   background-color: var(--color-card-background);
   border: none;
@@ -556,7 +529,6 @@ img {
   flex-grow: 1;
 }
 
-/* Carrossel Bootstrap */
 .carousel-control-prev,
 .carousel-control-next {
   width: 5%;
@@ -572,7 +544,6 @@ img {
   opacity: 1;
 }
 
-/* Seção de Números */
 .number-card {
   background-color: var(--color-primary);
   color: #fff;
@@ -592,7 +563,6 @@ img {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* Seção de Depoimentos */
 .testimonials-slider-container {
   position: relative;
   max-width: 800px;
@@ -665,7 +635,6 @@ img {
   background-color: var(--color-primary);
 }
 
-/* Seção da Equipe */
 .team-card {
   position: relative;
   overflow: hidden;
@@ -740,7 +709,6 @@ img {
   place-items: center;
 }
 
-/* Seção de Contato */
 .contact-section .form-label {
   font-weight: 500;
 }
@@ -776,7 +744,6 @@ img {
   box-shadow: var(--box-shadow-md);
 }
 
-/* Rodapé (Footer) */
 .footer {
   background-color: var(--color-text-dark);
   color: #e0e0e0;
@@ -838,7 +805,6 @@ img {
   color: var(--color-secondary);
 }
 
-/* Botão Voltar ao Topo */
 #backToTopBtn {
   position: fixed;
   bottom: 2rem;
@@ -871,7 +837,6 @@ img {
   content: "↑";
 }
 
-/* Animações com IntersectionObserver */
 [data-aos] {
   opacity: 0;
   transform: translateY(20px);
@@ -893,12 +858,10 @@ img {
   transform: translateX(0);
 }
 
-/* Opcional: Efeito parallax no background do hero */
 .hero-bg {
-  transform: translateZ(0); /* Garante que a GPU seja usada */
+  transform: translateZ(0);
 }
 
-/* Efeito de Parallax: Otimização */
 @media (prefers-reduced-motion: reduce) {
   * {
       transition: none !important;
@@ -906,11 +869,10 @@ img {
   }
 
   .hero-bg {
-      background-attachment: scroll; /* Desabilita o parallax para acessibilidade */
+      background-attachment: scroll;
   }
 }
 
-/* Media Queries para Responsividade (Mobile-first) */
 @media (min-width: 576px) {
   .section {
       padding: var(--spacing-lg) 0;

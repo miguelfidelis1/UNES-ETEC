@@ -1,4 +1,3 @@
-// Mapeamento de dados dos cursos para o modal
 const coursesData = {
   1: {
       title: "Análise e Desenvolvimento de Sistemas",
@@ -76,17 +75,12 @@ const coursesData = {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Função para verificar se o usuário prefere movimento reduzido
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ===================================================================== */
-  /* 1. Menu Mobile e Scroll Suave                                        */
-  /* ===================================================================== */
   const navbarToggler = document.querySelector('.navbar-toggler');
   const mobileMenu = document.querySelector('.navbar-mobile');
   const mobileLinks = document.querySelectorAll('.mobile-nav-link');
 
-  // Abre/fecha o menu mobile
   navbarToggler.addEventListener('click', () => {
       const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
       navbarToggler.setAttribute('aria-expanded', !isExpanded);
@@ -94,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
       mobileMenu.classList.toggle('active');
   });
 
-  // Fecha o menu ao clicar em um link
   mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
           navbarToggler.setAttribute('aria-expanded', 'false');
@@ -103,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  // Scroll suave para as âncoras da página
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -117,9 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  /* ===================================================================== */
-  /* 2. ScrollSpy e Header Fixo                                           */
-  /* ===================================================================== */
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.navbar-desktop .nav-link');
 
@@ -142,13 +131,10 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   window.addEventListener('scroll', updateScrollSpy);
-  updateScrollSpy(); // Chama na inicialização para ativar a primeira seção
+  updateScrollSpy();
 
-  /* ===================================================================== */
-  /* 3. Animações com IntersectionObserver                                */
-  /* ===================================================================== */
   const animateOnScroll = () => {
-      if (prefersReducedMotion) return; // Desabilita animações se o usuário preferir
+      if (prefersReducedMotion) return;
 
       const elements = document.querySelectorAll('[data-aos]');
 
@@ -156,12 +142,11 @@ document.addEventListener("DOMContentLoaded", function () {
           entries.forEach(entry => {
               if (entry.isIntersecting) {
                   entry.target.classList.add('is-visible');
-                  // Para animar apenas uma vez
                   observer.unobserve(entry.target);
               }
           });
       }, {
-          threshold: 0.2 // A animação dispara quando 20% do elemento está visível
+          threshold: 0.2
       });
 
       elements.forEach(el => observer.observe(el));
@@ -169,9 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animateOnScroll();
 
-  /* ===================================================================== */
-  /* 4. Counters Animados                                                 */
-  /* ===================================================================== */
   const counters = document.querySelectorAll('.counter');
 
   const runCounters = (entries, observer) => {
@@ -180,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
               const counter = entry.target;
               const target = parseInt(counter.dataset.target, 10);
               let count = 0;
-              const increment = Math.ceil(target / 200); // 200 frames
+              const increment = Math.ceil(target / 200);
 
               const updateCounter = () => {
                   if (count < target) {
@@ -194,10 +176,10 @@ document.addEventListener("DOMContentLoaded", function () {
               if (!prefersReducedMotion) {
                   requestAnimationFrame(updateCounter);
               } else {
-                  counter.innerText = target; // Mostra o valor final sem animação
+                  counter.innerText = target;
               }
 
-              observer.unobserve(counter); // Para a animação após o primeiro scroll
+              observer.unobserve(counter);
           }
       });
   };
@@ -207,15 +189,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   counters.forEach(counter => counterObserver.observe(counter));
 
-  /* ===================================================================== */
-  /* 5. Slider de Depoimentos (JavaScript Puro)                           */
-  /* ===================================================================== */
   const slider = document.querySelector('.testimonials-slider');
   const dotsContainer = document.querySelector('.testimonials-slider-dots');
   const testimonialCards = document.querySelectorAll('.testimonial-card');
   let currentIndex = 0;
 
-  // Cria os pontos de navegação
   testimonialCards.forEach((_, index) => {
       const dot = document.createElement('span');
       dot.classList.add('dot');
@@ -233,16 +211,14 @@ document.addEventListener("DOMContentLoaded", function () {
           behavior: 'smooth'
       });
 
-      // Atualiza os pontos de navegação
       dots.forEach(dot => dot.classList.remove('active'));
       dots[index].classList.add('active');
       currentIndex = index;
   };
 
-  // Auto-play do slider
   let autoplayInterval;
   const startAutoplay = () => {
-      if (prefersReducedMotion) return; // Desabilita auto-play
+      if (prefersReducedMotion) return;
       autoplayInterval = setInterval(() => {
           let nextIndex = (currentIndex + 1) % testimonialCards.length;
           goToSlide(nextIndex);
@@ -253,12 +229,10 @@ document.addEventListener("DOMContentLoaded", function () {
       clearInterval(autoplayInterval);
   };
 
-  // Pausa o auto-play no hover e retoma ao sair
   slider.addEventListener('mouseenter', stopAutoplay);
   slider.addEventListener('mouseleave', startAutoplay);
   startAutoplay();
 
-  // Atualiza os pontos de acordo com o scroll do usuário (swipe)
   slider.addEventListener('scroll', () => {
       const scrollLeft = slider.scrollLeft;
       const cardWidth = testimonialCards[0].offsetWidth + (parseFloat(window.getComputedStyle(testimonialCards[0]).marginLeft) * 2);
@@ -273,9 +247,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  /* ===================================================================== */
-  /* 6. Modais de Cursos (Bootstrap)                                      */
-  /* ===================================================================== */
   const courseModal = document.getElementById('courseModal');
   courseModal.addEventListener('show.bs.modal', event => {
       const button = event.relatedTarget;
@@ -293,7 +264,7 @@ document.addEventListener("DOMContentLoaded", function () {
           modalImage.alt = course.title;
           modalDescription.textContent = course.description;
 
-          modalTopics.innerHTML = ''; // Limpa a lista
+          modalTopics.innerHTML = '';
           course.topics.forEach(topic => {
               const li = document.createElement('li');
               li.textContent = topic;
@@ -302,9 +273,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  /* ===================================================================== */
-  /* 7. Formulário de Contato com Validação e Toast                       */
-  /* ===================================================================== */
   const contactForm = document.getElementById('contact-form');
   const successToast = new bootstrap.Toast(document.getElementById('successToast'));
   const errorToast = new bootstrap.Toast(document.getElementById('errorToast'));
@@ -314,7 +282,6 @@ document.addEventListener("DOMContentLoaded", function () {
       event.stopPropagation();
 
       if (contactForm.checkValidity()) {
-          // Simula o envio do formulário
           console.log('Formulário enviado com sucesso!');
           successToast.show();
           contactForm.reset();
@@ -325,9 +292,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   }, false);
 
-  /* ===================================================================== */
-  /* 8. Botão "Voltar ao Topo"                                            */
-  /* ===================================================================== */
   const backToTopBtn = document.getElementById('backToTopBtn');
 
   window.addEventListener('scroll', () => {
@@ -345,20 +309,16 @@ document.addEventListener("DOMContentLoaded", function () {
       });
   });
 
-  /* ===================================================================== */
-  /* 9. Dark Mode Toggle com LocalStorage                                 */
-  /* ===================================================================== */
+
   const darkModeToggle = document.getElementById('dark-mode-toggle');
   const html = document.documentElement;
 
-  // Carrega a preferência do usuário do localStorage
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
       html.setAttribute('data-theme', savedTheme);
       darkModeToggle.checked = savedTheme === 'dark';
   }
 
-  // Salva a preferência quando o toggle é alterado
   darkModeToggle.addEventListener('change', () => {
       if (darkModeToggle.checked) {
           html.setAttribute('data-theme', 'dark');
